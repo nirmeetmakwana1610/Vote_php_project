@@ -1,0 +1,6 @@
+CREATE TABLE v_user(U_Id int AUTO_INCREMENT PRIMARY KEY,U_Name varchar(60),U_Pass varchar(12),U_email varchar(60),U_Mobil varchar(15),Created_at varchar(30));
+
+CREATE TABLE votes (v_id int PRIMARY KEY AUTO_INCREMENT,c_id int,u_id int,date_time varchar(50),a int,FOREIGN KEY(c_id) REFERENCES candidads_info(C_Id),FOREIGN KEY (u_id) REFERENCES v_user(U_Id))
+
+CREATE TABLE Result(r_id int PRIMARY KEY AUTO_INCREMENT,c_id int,p_id int,Total_vote int,FOREIGN KEY(c_id) REFERENCES candidads_info(C_Id),FOREIGN KEY(c_id) REFERENCES party_info(P_Id))
+
